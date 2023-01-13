@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run --server.port $PORT text_summarizer.py
+web: sh setup.sh && streamlit run --server.port $PORT text summarizer.py
