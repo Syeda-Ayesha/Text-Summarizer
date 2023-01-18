@@ -96,7 +96,7 @@ def main():
              st.markdown(html,unsafe_allow_html=True)
 
     if choice=='NER for URL':
-        st.subheader("Analyae text from URL")
+        st.subheader("Analyze text from URL")
         raw_url=st.text_input("Enter URL","Type here")
         text_lenth=st.slider("Lenth of Preview",50,100)
         def add_bg_from_url():
