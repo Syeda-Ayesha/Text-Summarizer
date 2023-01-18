@@ -3,6 +3,8 @@ import streamlit as st
 import spacy
 nlp=spacy.load('en_core_web_sm')
 from spacy import displacy
+import nltk
+nltk.download('punkt')
 HTML_WRAPPER="""<div style="overflow-x:auto; border:1px solid #e6e9ef;border-radius:0.25rem; padding:1rem">{}</div>"""
 
 #[theme]
