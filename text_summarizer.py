@@ -47,28 +47,13 @@ def main():
     choice=st.sidebar.selectbox("Select Activity",activities)
     
     if choice=='Summarize':
-        st.subheader("Summary with NLP")
-        raw_text=st.text_area("Enter Text Here","Type Here")
-        summary_choice=st.selectbox("Summary Choice",["Sumy Lex Rank"])
-        def add_bg_from_url():
-            st.markdown(
-                f"""
-                <style>
-                .stApp {{
-                    background-image: url("https://wallpaperaccess.com/full/1236655.jpg");
-                    background-attachment: fixed;
-                    background-size: cover
-                }}
-                </style>
-                """,
-                unsafe_allow_html=True
-            )
-
-        add_bg_from_url()
-        if st.button("Summarize"):
-            if summary_choice=="Sumy Lex Rank":
-                summary_result=sumy_summarizer(raw_text)
-            st.write(summary_result)
+        import gradio as gr
+        title = 'Text Summarization'
+        text_ = "The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building, and the tallest structure in Paris. Its base is square, measuring 125 metres (410 ft) on each side. During its construction, the Eiffel Tower surpassed the Washington Monument to become the tallest man-made structure in the world, a title it held for 41 years until the Chrysler Building in New York City was finished in 1930. It was the first structure to reach a height of 300 metres. Due to the addition of a broadcasting aerial at the top of the tower in 1957, it is now taller than the Chrysler Building by 5.2 metres (17 ft). Excluding transmitters, the Eiffel Tower is the second tallest free-standing structure in France after the Millau Viaduct."
+        interface = gr.Interface.load("huggingface/facebook/bart-large-cnn",
+        title = title,
+        theme = "peach",
+        examples = [[text_]]).launch()
     if choice=="NER Checker":
         st.subheader("Entity Recognition with Sapcy")
         raw_text=st.text_area("# Enter Text Here","Type Here")
