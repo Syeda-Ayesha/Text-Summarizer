@@ -49,11 +49,7 @@ def main():
     if choice=='Summarize':
         st.subheader("Summary with NLP")
         raw_text=st.text_area("Enter Text Here","Type Here")
-
-        summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
-        if st.button("Summarize"):
-            st.write(summarizer(raw_text, max_length=130, min_length=30, do_sample=False))
-        
+        summary_choice=st.selectbox("Summary Choice",["Sumy Lex Rank"])
 
         def add_bg_from_url():
             st.markdown(
@@ -70,6 +66,10 @@ def main():
             )
 
         add_bg_from_url()
+        if st.button("Summarize"):
+            if summary_choice=="Sumy Lex Rank":
+                summary_result=sumy_summarizer(raw_text)
+            st.write(summary_result)
     if choice=="NER Checker":
         st.subheader("Entity Recognition with Sapcy")
         raw_text=st.text_area("# Enter Text Here","Type Here")
