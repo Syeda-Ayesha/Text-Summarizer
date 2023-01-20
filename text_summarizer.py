@@ -6,7 +6,7 @@ from spacy import displacy
 import nltk
 nltk.download('punkt')
 HTML_WRAPPER="""<div style="overflow-x:auto; border:1px solid #e6e9ef;border-radius:0.25rem; padding:1rem">{}</div>"""
-
+from transformers import pipeline
 #[theme]
 #base="light"
 #primaryColor="#aa4bff"
@@ -49,7 +49,6 @@ def main():
     if choice=='Summarize':
         st.subheader("Summary with NLP")
         raw_text=st.text_area("Enter Text Here","Type Here")
-        from transformers import pipeline
 
         summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
         if st.button("Summarize"):
