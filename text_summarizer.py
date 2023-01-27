@@ -105,7 +105,7 @@ def main():
                 f"""
                 <style>
                 .stApp {{
-                    background-image: url("https://wallpaperaccess.com/full/2961734.jpg");
+                    background-image: url("https://cdn.britannica.com/88/129488-050-6B1CA905/Internet-blue-screen-blog-society-history-media-2009.jpg");
                     background-attachment: fixed;
                     background-size: cover
                 }}
