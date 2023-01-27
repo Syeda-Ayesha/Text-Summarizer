@@ -54,7 +54,7 @@ def main():
                 f"""
                 <style>
                 .stApp {{
-                    background-image: url("https://www.ice.com/publicdocs/images/Hero-Image-Fixed-Income-Data-Technology-3-1920x600.jpg");
+                    background-image: url("https://thumbs.dreamstime.com/b/conceptual-hand-writing-showing-summary-business-photo-showcasing-brief-statement-account-main-points-something-subject-148231729.jpg");
                     background-attachment: fixed;
                     background-size: cover
                 }}
