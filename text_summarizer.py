@@ -66,7 +66,8 @@ def main():
         if st.button("Summarize"):
             summary_result=sumy_summarizer(raw_text)
             output = summary_result # final_result_from_processing_the_input
-            st.text_area(label="Summary:", value=output, height=200)
+            st.write("## Summary:")
+            st.text_area(label="## :blue[**Summary:**]", value=output, height=200)
     if choice=="NER Checker":
         st.subheader("Entity Recognition with Sapcy")
         raw_text=st.text_area("# Enter Text Here","Type Here")
