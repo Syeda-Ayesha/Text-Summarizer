@@ -39,8 +39,8 @@ def get_text(raw_url):
     fetch_text=' '.join(map(lambda p:p.text,soup.find_all('p')))
     return fetch_text
 def main():
-    """Summary and Entity Checker"""
-    st.title("Summary and Entity Checker")
+    """Text Summarization and Entity Checker"""
+    st.title("Text Summarization and Entity Checker")
     activities=["Summarize","NER Checker","NER for URL"]
     choice=st.sidebar.selectbox("Select Activity",activities)
     
