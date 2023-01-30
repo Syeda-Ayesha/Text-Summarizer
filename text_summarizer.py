@@ -122,7 +122,8 @@ def main():
                 len_of_short_text=round(len(result)/text_lenth)
                 st.info("Length::Full Text:: {}".format(len_of_full_text))
                 st.info("length::Short Text:: {}".format(len_of_short_text))
-                st.write(result[:len_of_short_text])
+                output1 = result[:len_of_short_text] # final_result_from_processing_the_input
+                st.text_area(label="Preview:", value=output1, height=200)
                 summary_docx=sumy_summarizer(result)
                 docx=analyze_text(summary_docx)
                 html=displacy.render(docx,style='ent')
