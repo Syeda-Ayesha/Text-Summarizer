@@ -46,9 +46,8 @@ def main():
     
     if choice=='Summarize':
         st.subheader("Summary with NLP")
-        raw_text=st.text_area("Enter Text Here","Type Here")
-        summary_choice=st.selectbox("Summary Choice",["Sumy Lex Rank"])
-
+        raw_text=st.text_area("Enter Text Here","Type Here",height=140)
+       
         def add_bg_from_url():
             st.markdown(
                 f"""
@@ -65,9 +64,9 @@ def main():
 
         add_bg_from_url()
         if st.button("Summarize"):
-            if summary_choice=="Sumy Lex Rank":
-                summary_result=sumy_summarizer(raw_text)
-            st.write(summary_result)
+            summary_result=sumy_summarizer(raw_text)
+            output = summary_result # final_result_from_processing_the_input
+            st.text_area(label="Summary:", value=output, height=200)
     if choice=="NER Checker":
         st.subheader("Entity Recognition with Sapcy")
         raw_text=st.text_area("# Enter Text Here","Type Here")
