@@ -76,7 +76,7 @@ def main():
                 f"""
                 <style>
                 .stApp {{
-                    background-image: url("https://d2mk45aasx86xg.cloudfront.net/Named_Entity_Recognition_NER_11zon_3a4a69836b.webp");
+                    background-image: url("https://wallpaperaccess.com/full/2961734.jpg");
                     background-attachment: fixed;
                     background-size: cover
                 }}
