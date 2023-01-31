@@ -76,7 +76,7 @@ def main():
                 f"""
                 <style>
                 .stApp {{
-                    background-image: url("https://wallpaperaccess.com/full/2961734.jpg");
+                    background-image: url("https://d2mk45aasx86xg.cloudfront.net/AI_Problem_solving_Tool_in_Machine_Learning_11zon_0e0a7dd361.webp");
                     background-attachment: fixed;
                     background-size: cover
                 }}
